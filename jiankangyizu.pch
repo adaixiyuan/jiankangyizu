@@ -1,0 +1,42 @@
+//
+//  jiankangyizu.pch
+//  jiankangyizu
+//
+//  Created by apple on 15/1/16.
+//  Copyright (c) 2015年 jerei. All rights reserved.
+//
+
+#ifndef jiankangyizu_jiankangyizu_pch
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
+#import "JsonToModel.h"
+#import "URLNameSpace.h"
+#import "AppDelegate.h"
+#import "commonJudgeMent.h"
+#import "commonAction.h"
+#define jiankangyizu_jiankangyizu_pch
+#define kDeviceWidth [UIScreen mainScreen].bounds.size.width
+#define KDeviceHeight [UIScreen mainScreen].bounds.size.height
+#define BACK_COLOR [UIColor colorWithRed:243.0/255.0 green:243.0/255.0 blue:243.0/255.0 alpha:1.0] //背景颜色
+#define YINGYONG_COLOR [UIColor colorWithRed:41.0/255.0 green:144.0/255.0 blue:208.0/255.0 alpha:1.0]//主色调
+#define APPALL ((AppDelegate*)[[UIApplication sharedApplication] delegate])
+#define LIGHTBLUECOLOR [UIColor colorWithRed:51/255.0 green:153/255.0 blue:204/255.0 alpha:1]
+#define SHENLUCOLOR [UIColor colorWithRed:0/255.0 green:0/255.0 blue:153/255.0 alpha:1]
+#define QIANLUCOLOR [UIColor colorWithRed:51/255.0 green:204/255.0 blue:153/255.0 alpha:1]
+
+#define QIANLANCOLOR [UIColor colorWithRed:51/255.0 green:204/255.0 blue:255/255.0 alpha:1]
+
+#define XMPP_HOSTIP @"xxlpush.jerei.com"//119.180.98.134
+#define XMPP_HOSTPORT 9810
+#define XMPP_SERVERIP @""
+#define PROJECTSID 51
+#define STOP_BACK @"您已填写内容，确认返回吗？"
+#define BUTTON_COLOR [UIColor whiteColor]
+#define PAGESIZE 10
+#define NONETWORK @"无网络连接，请检查您的网络"
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif
