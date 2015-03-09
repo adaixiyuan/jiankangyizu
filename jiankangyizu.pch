@@ -31,7 +31,7 @@
 #define XMPP_HOSTIP @"xxlpush.jerei.com"//119.180.98.134
 #define XMPP_HOSTPORT 9810
 #define XMPP_SERVERIP @""
-#define PROJECTSID 51
+#define PROJECTSID @"jkyzdoctor"
 #define STOP_BACK @"您已填写内容，确认返回吗？"
 #define BUTTON_COLOR [UIColor whiteColor]
 #define PAGESIZE 10

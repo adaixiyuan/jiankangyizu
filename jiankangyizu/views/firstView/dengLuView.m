@@ -282,9 +282,9 @@
 -(void)denglu{
 //   [self setupViewControllers];
     if ([name isEqualToString:@""]) {
-        [commonAction showToast:@"请输入用户名" WhithNavigationController:self.navigationController];
+        [commonAction showToast:@"请输入用户名" WhithNavigationController:self];
     }else if ([password isEqualToString:@""]){
-         [commonAction showToast:@"请输入密码" WhithNavigationController:self.navigationController];
+         [commonAction showToast:@"请输入密码" WhithNavigationController:self];
         
     }else{
         alert = [[UIAlertView alloc]initWithTitle:@"" message:@"登录中....." delegate:nil
@@ -361,7 +361,7 @@
                     [userDefaults removeObjectForKey:@"kXMPPmyJID"];
                     [userDefaults removeObjectForKey:@"kXMPPmyPassword"];
                 }
-                [userDefaults setObject:[NSString stringWithFormat:@"%d_%@",PROJECTSID,user.usern] forKey:@"kXMPPmyJID"];
+                [userDefaults setObject:[NSString stringWithFormat:@"%@",PROJECTSID,user.usern] forKey:@"kXMPPmyJID"];
                 NSLog(@"jid:%@",[userDefaults objectForKey:@"kXMPPmyJID"]);
                 NSString *userPass=[userDefaults objectForKey:@"userPassword"];
                 [userDefaults setObject:userPass forKey:@"kXMPPmyPassword"];

@@ -316,7 +316,10 @@
                 [request setHTTPBody:data];
             }
             else{
-                NSString *str=[NSString stringWithFormat:@"start_page=1&page_size=%d&is_page=1&table_name=vi_views&condition=department_no=%@",PAGESIZE,conditionString];//设置参数
+                NSString *str=[NSString stringWithFormat:@"start_page=1&page_size=%d&is_page=1&table_name=vi_news&condition= department_no like '%%%@%%' or title like '%%%@%%' or summary like '%%%@%%' or content like '%%%@%%' ",PAGESIZE,conditionString,conditionString,conditionString,conditionString];//设置参数
+                str = [str stringByReplacingOccurrencesOfString:@"%" withString:@"%25"];
+                NSLog(@"url str:%@",str);
+            
                 NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];
                 [request setHTTPBody:data];
             }
@@ -363,12 +366,12 @@
             [request setHTTPMethod:@"POST"];
             //            NSString *str=[NSString stringWithFormat:@"flag=%@&method=%@&jsonStr={\"%@\":%d,\"page_index\":%d,\"page_size\":%d,\"state\":%d}",space,method,firstCanShuString,seletId,page,PAGESIZE,state];//设置参数
             if (conditionString != nil && ![conditionString isEqualToString:@""]) {
-                NSString *str=[NSString stringWithFormat:@"start_page=%d&page_size=%d&is_page=1&table_name=vi_views",page,PAGESIZE];//设置参数'
+                NSString *str=[NSString stringWithFormat:@"start_page=%d&page_size=%d&is_page=1&table_name=vi_news",page,PAGESIZE];//设置参数'
                 NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];
                 [request setHTTPBody:data];
             }
             else{
-                NSString *str=[NSString stringWithFormat:@"start_page=%d&page_size=%d&is_page=1&table_name=vi_views&condition=cu.usern like %%%@%%",page,PAGESIZE,conditionString];//设置参数
+                NSString *str=[NSString stringWithFormat:@"start_page=1&page_size=%d&is_page=1&table_name=vi_news&condition= department_no like '%%%@%%' or title like '%%%@%%' or summary like '%%%@%%' or content like '%%%@%%' ",PAGESIZE,conditionString,conditionString,conditionString,conditionString];//设置参数
                 NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];
                 [request setHTTPBody:data];
             }

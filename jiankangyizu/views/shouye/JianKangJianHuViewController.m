@@ -1196,7 +1196,7 @@
         NSLog(@"exception:%@",exception.description);
     }
     @finally {
-        [commonAction showToast:@"查询失败" WhithNavigationController:self.navigationController];
+//        [commonAction showToast:@"查询失败" WhithNavigationController:self.navigationController];
     }
 }
 

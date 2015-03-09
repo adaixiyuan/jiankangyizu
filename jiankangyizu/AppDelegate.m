@@ -46,12 +46,14 @@
         //这里还是原来的代码
         [[UIApplication sharedApplication]registerForRemoteNotificationTypes:(UIRemoteNotificationTypeAlert |UIRemoteNotificationTypeBadge |UIRemoteNotificationTypeSound)];
     }
+//    [self setupStream];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     NSData *userData=[[NSUserDefaults standardUserDefaults]objectForKey:@"user"];
     CommonUser *user= [NSKeyedUnarchiver unarchiveObjectWithData:userData];
     if (user!=nil)
     {
       
+//        [self connectPushServerWithUserName:user.usern];
         
         UIViewController *firstViewController = [[UserManage alloc] init];
         UIViewController *firstNavigationController = [[UINavigationController alloc]
@@ -118,7 +120,15 @@
                     }
                 });});
         }
-        
+//        UILocalNotification *localNote = [[UILocalNotification alloc] init];
+//        localNote.alertAction = @"操作标题";
+//        localNote.alertBody = @"伦家想你了～～～";
+//        localNote.applicationIconBadgeNumber  = 1;
+//        localNote.alertLaunchImage = @"icon.png";
+//        localNote.fireDate =[NSDate dateWithTimeIntervalSinceNow:10] ;
+//        UIApplication *app = [UIApplication sharedApplication];
+//        [app cancelAllLocalNotifications];
+//        [app scheduleLocalNotification:localNote];
 
     }
     
@@ -139,7 +149,26 @@
 
     return YES;
 }
-
+- (void)connectPushServerWithUserName:(NSString *)username
+{
+    NSUserDefaults *userDefaults=[NSUserDefaults standardUserDefaults];
+    [userDefaults setObject:@"tiebi123" forKey:@"userPassword"];
+    NSLog(@"password : %@",[userDefaults objectForKey:@"userPassword"]);
+    NSLog(@"userName = %@",username);
+    //断开聊天
+    if ([APPALL connect]){
+        [APPALL disconnect];
+        
+        [userDefaults removeObjectForKey:@"kXMPPmyJID"];
+        [userDefaults removeObjectForKey:@"kXMPPmyPassword"];
+    }
+    [userDefaults setObject:[NSString stringWithFormat:@"%@_%@",PROJECTSID,username] forKey:@"kXMPPmyJID"];
+    NSLog(@"jid:%@",[userDefaults objectForKey:@"kXMPPmyJID"]);
+    NSString *userPass=[userDefaults objectForKey:@"userPassword"];
+    [userDefaults setObject:userPass forKey:@"kXMPPmyPassword"];
+    NSLog(@"kxmppmypassword%@",[userDefaults objectForKey:@"kXMPPmyPassword"]);
+    [APPALL connect];
+}
 - (void)customizeTabBarForController:(RDVTabBarController *)tabBarController {
     //    UIImage *finishedImage = [UIImage imageNamed:@"tabbar_selected_background"];
     //    UIImage *unfinishedImage = [UIImage imageNamed:@"tabbar_normal_background"];
@@ -287,7 +316,7 @@ void caughtException(NSException *exception)
     NSLog(@"------%@",deviceToken);
 }
 -(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo{
-    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
+//    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
     [[UIApplication sharedApplication] cancelAllLocalNotifications];
     NSLog(@"didReceiveRemoteNotification    %@",userInfo);
 }
@@ -295,7 +324,7 @@ void caughtException(NSException *exception)
     
 }
 -(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler{
-    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
+//    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
     [[UIApplication sharedApplication] cancelAllLocalNotifications];
     NSLog(@"didReceiveRemoteNotification -----%@",userInfo);
     NSDictionary *dictionary = [userInfo objectForKey:@"aps"];

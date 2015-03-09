@@ -191,9 +191,9 @@
 		4F18D2291AA2077F0034FCCF /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1751AA2077F0034FCCF /* DDFileLogger.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4F18D22A1AA2077F0034FCCF /* DDList.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1771AA2077F0034FCCF /* DDList.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4F18D22B1AA2077F0034FCCF /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1791AA2077F0034FCCF /* DDLog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		4F18D22C1AA2077F0034FCCF /* DDTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D17B1AA2077F0034FCCF /* DDTTYLogger.m */; };
-		4F18D22D1AA2077F0034FCCF /* DDXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D17E1AA2077F0034FCCF /* DDXMLDocument.m */; };
-		4F18D22E1AA2077F0034FCCF /* DDXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1801AA2077F0034FCCF /* DDXMLElement.m */; };
+		4F18D22C1AA2077F0034FCCF /* DDTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D17B1AA2077F0034FCCF /* DDTTYLogger.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4F18D22D1AA2077F0034FCCF /* DDXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D17E1AA2077F0034FCCF /* DDXMLDocument.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4F18D22E1AA2077F0034FCCF /* DDXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1801AA2077F0034FCCF /* DDXMLElement.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4F18D22F1AA2077F0034FCCF /* DDXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1821AA2077F0034FCCF /* DDXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4F18D2301AA2077F0034FCCF /* DispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1851AA2077F0034FCCF /* DispatchQueueLogFormatter.m */; };
 		4F18D2311AA2077F0034FCCF /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1871AA2077F0034FCCF /* GCDAsyncSocket.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -201,74 +201,74 @@
 		4F18D2331AA2077F0034FCCF /* libidn-1.15.tar.gz in Resources */ = {isa = PBXBuildFile; fileRef = 4F18D18B1AA2077F0034FCCF /* libidn-1.15.tar.gz */; };
 		4F18D2341AA2077F0034FCCF /* libidn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F18D18C1AA2077F0034FCCF /* libidn.a */; };
 		4F18D2351AA2077F0034FCCF /* LibIDN.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D18E1AA2077F0034FCCF /* LibIDN.m */; };
-		4F18D2361AA2077F0034FCCF /* NSData+XMPP.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1901AA2077F0034FCCF /* NSData+XMPP.m */; };
+		4F18D2361AA2077F0034FCCF /* NSData+XMPP.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1901AA2077F0034FCCF /* NSData+XMPP.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4F18D2371AA2077F0034FCCF /* NSDate+XMPPDateTimeProfiles.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1921AA2077F0034FCCF /* NSDate+XMPPDateTimeProfiles.m */; };
-		4F18D2381AA2077F0034FCCF /* NSNumber+XMPP.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1941AA2077F0034FCCF /* NSNumber+XMPP.m */; };
-		4F18D2391AA2077F0034FCCF /* NSString+DDXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1961AA2077F0034FCCF /* NSString+DDXML.m */; };
-		4F18D23A1AA2077F0034FCCF /* NSXMLElement+XMPP.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1981AA2077F0034FCCF /* NSXMLElement+XMPP.m */; };
+		4F18D2381AA2077F0034FCCF /* NSNumber+XMPP.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1941AA2077F0034FCCF /* NSNumber+XMPP.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4F18D2391AA2077F0034FCCF /* NSString+DDXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1961AA2077F0034FCCF /* NSString+DDXML.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4F18D23A1AA2077F0034FCCF /* NSXMLElement+XMPP.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1981AA2077F0034FCCF /* NSXMLElement+XMPP.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4F18D23B1AA2077F0034FCCF /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4F18D1991AA2077F0034FCCF /* README.txt */; };
 		4F18D23C1AA2077F0034FCCF /* RFImageToDataTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D19B1AA2077F0034FCCF /* RFImageToDataTransformer.m */; };
 		4F18D23D1AA2077F0034FCCF /* TURNSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D19E1AA2077F0034FCCF /* TURNSocket.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4F18D23E1AA2077F0034FCCF /* XMPPAutoPing.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1A11AA2077F0034FCCF /* XMPPAutoPing.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4F18D23F1AA2077F0034FCCF /* XMPPAutoTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1A31AA2077F0034FCCF /* XMPPAutoTime.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4F18D2401AA2077F0034FCCF /* XMPPCapabilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1A51AA2077F0034FCCF /* XMPPCapabilities.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		4F18D2411AA2077F0034FCCF /* XMPPCapabilities.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1A61AA2077F0034FCCF /* XMPPCapabilities.xcdatamodel */; };
+		4F18D2411AA2077F0034FCCF /* XMPPCapabilities.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1A61AA2077F0034FCCF /* XMPPCapabilities.xcdatamodel */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4F18D2421AA2077F0034FCCF /* XMPPCapabilitiesCoreDataStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1A81AA2077F0034FCCF /* XMPPCapabilitiesCoreDataStorage.m */; };
-		4F18D2431AA2077F0034FCCF /* XMPPCapsCoreDataStorageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1AA1AA2077F0034FCCF /* XMPPCapsCoreDataStorageObject.m */; };
+		4F18D2431AA2077F0034FCCF /* XMPPCapsCoreDataStorageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1AA1AA2077F0034FCCF /* XMPPCapsCoreDataStorageObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4F18D2441AA2077F0034FCCF /* XMPPCapsResourceCoreDataStorageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1AC1AA2077F0034FCCF /* XMPPCapsResourceCoreDataStorageObject.m */; };
 		4F18D2451AA2077F0034FCCF /* XMPPCoreDataStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1AE1AA2077F0034FCCF /* XMPPCoreDataStorage.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4F18D2461AA2077F0034FCCF /* XMPPDateTimeProfiles.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1B11AA2077F0034FCCF /* XMPPDateTimeProfiles.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4F18D2471AA2077F0034FCCF /* XMPPDigestAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1B31AA2077F0034FCCF /* XMPPDigestAuthentication.m */; };
-		4F18D2481AA2077F0034FCCF /* XMPPElement+Delay.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1B51AA2077F0034FCCF /* XMPPElement+Delay.m */; };
+		4F18D2481AA2077F0034FCCF /* XMPPElement+Delay.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1B51AA2077F0034FCCF /* XMPPElement+Delay.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4F18D2491AA2077F0034FCCF /* XMPPElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1B71AA2077F0034FCCF /* XMPPElement.m */; };
-		4F18D24A1AA2077F0034FCCF /* XMPPGroupCoreDataStorageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1BA1AA2077F0034FCCF /* XMPPGroupCoreDataStorageObject.m */; };
+		4F18D24A1AA2077F0034FCCF /* XMPPGroupCoreDataStorageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1BA1AA2077F0034FCCF /* XMPPGroupCoreDataStorageObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4F18D24B1AA2077F0034FCCF /* XMPPIDTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1BC1AA2077F0034FCCF /* XMPPIDTracker.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4F18D24C1AA2077F0034FCCF /* XMPPIQ+JabberRPC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1BF1AA2077F0034FCCF /* XMPPIQ+JabberRPC.m */; };
 		4F18D24D1AA2077F0034FCCF /* XMPPIQ+JabberRPCResonse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1C11AA2077F0034FCCF /* XMPPIQ+JabberRPCResonse.m */; };
 		4F18D24E1AA2077F0034FCCF /* XMPPIQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1C31AA2077F0034FCCF /* XMPPIQ.m */; };
 		4F18D24F1AA2077F0034FCCF /* XMPPJabberRPCModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1C51AA2077F0034FCCF /* XMPPJabberRPCModule.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		4F18D2501AA2077F0034FCCF /* XMPPJID.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1C71AA2077F0034FCCF /* XMPPJID.m */; };
+		4F18D2501AA2077F0034FCCF /* XMPPJID.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1C71AA2077F0034FCCF /* XMPPJID.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4F18D2511AA2077F0034FCCF /* XMPPMessage+XEP0045.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1CA1AA2077F0034FCCF /* XMPPMessage+XEP0045.m */; };
-		4F18D2521AA2077F0034FCCF /* XMPPMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1CC1AA2077F0034FCCF /* XMPPMessage.m */; };
+		4F18D2521AA2077F0034FCCF /* XMPPMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1CC1AA2077F0034FCCF /* XMPPMessage.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4F18D2531AA2077F0034FCCF /* XMPPModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1CE1AA2077F0034FCCF /* XMPPModule.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		4F18D2541AA2077F0034FCCF /* XMPPMUC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1D01AA2077F0034FCCF /* XMPPMUC.m */; };
+		4F18D2541AA2077F0034FCCF /* XMPPMUC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1D01AA2077F0034FCCF /* XMPPMUC.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4F18D2551AA2077F0034FCCF /* XMPPParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1D21AA2077F0034FCCF /* XMPPParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		4F18D2561AA2077F0034FCCF /* XMPPPing.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1D41AA2077F0034FCCF /* XMPPPing.m */; };
+		4F18D2561AA2077F0034FCCF /* XMPPPing.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1D41AA2077F0034FCCF /* XMPPPing.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4F18D2571AA2077F0034FCCF /* XMPPPresence.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1D61AA2077F0034FCCF /* XMPPPresence.m */; };
 		4F18D2581AA2077F0034FCCF /* XMPPPubSub.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1D81AA2077F0034FCCF /* XMPPPubSub.m */; };
 		4F18D2591AA2077F0034FCCF /* XMPPReconnect.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1DA1AA2077F0034FCCF /* XMPPReconnect.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4F18D25A1AA2077F0034FCCF /* XMPPResourceCoreDataStorageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1DD1AA2077F0034FCCF /* XMPPResourceCoreDataStorageObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4F18D25B1AA2077F0034FCCF /* XMPPResourceMemoryStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1DF1AA2077F0034FCCF /* XMPPResourceMemoryStorage.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		4F18D25C1AA2077F0034FCCF /* XMPPRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1E11AA2077F0034FCCF /* XMPPRoom.m */; };
+		4F18D25C1AA2077F0034FCCF /* XMPPRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1E11AA2077F0034FCCF /* XMPPRoom.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4F18D25D1AA2077F0034FCCF /* XMPPRoom.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1E21AA2077F0034FCCF /* XMPPRoom.xcdatamodel */; };
-		4F18D25E1AA2077F0034FCCF /* XMPPRoomCoreDataStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1E41AA2077F0034FCCF /* XMPPRoomCoreDataStorage.m */; };
+		4F18D25E1AA2077F0034FCCF /* XMPPRoomCoreDataStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1E41AA2077F0034FCCF /* XMPPRoomCoreDataStorage.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4F18D25F1AA2077F0034FCCF /* XMPPRoomMemoryStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1E61AA2077F0034FCCF /* XMPPRoomMemoryStorage.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		4F18D2601AA2077F0034FCCF /* XMPPRoomMessageCoreDataStorageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1E91AA2077F0034FCCF /* XMPPRoomMessageCoreDataStorageObject.m */; };
-		4F18D2611AA2077F0034FCCF /* XMPPRoomMessageMemoryStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1EB1AA2077F0034FCCF /* XMPPRoomMessageMemoryStorage.m */; };
+		4F18D2601AA2077F0034FCCF /* XMPPRoomMessageCoreDataStorageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1E91AA2077F0034FCCF /* XMPPRoomMessageCoreDataStorageObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4F18D2611AA2077F0034FCCF /* XMPPRoomMessageMemoryStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1EB1AA2077F0034FCCF /* XMPPRoomMessageMemoryStorage.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4F18D2621AA2077F0034FCCF /* XMPPRoomOccupantCoreDataStorageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1EE1AA2077F0034FCCF /* XMPPRoomOccupantCoreDataStorageObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		4F18D2631AA2077F0034FCCF /* XMPPRoomOccupantMemoryStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1F01AA2077F0034FCCF /* XMPPRoomOccupantMemoryStorage.m */; };
+		4F18D2631AA2077F0034FCCF /* XMPPRoomOccupantMemoryStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1F01AA2077F0034FCCF /* XMPPRoomOccupantMemoryStorage.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4F18D2641AA2077F0034FCCF /* XMPPRoster.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1F31AA2077F0034FCCF /* XMPPRoster.m */; };
 		4F18D2651AA2077F0034FCCF /* XMPPRoster.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1F41AA2077F0034FCCF /* XMPPRoster.xcdatamodel */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		4F18D2661AA2077F0034FCCF /* XMPPRosterCoreDataStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1F61AA2077F0034FCCF /* XMPPRosterCoreDataStorage.m */; };
+		4F18D2661AA2077F0034FCCF /* XMPPRosterCoreDataStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1F61AA2077F0034FCCF /* XMPPRosterCoreDataStorage.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4F18D2671AA2077F0034FCCF /* XMPPRosterMemoryStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1F81AA2077F0034FCCF /* XMPPRosterMemoryStorage.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4F18D2681AA2077F0034FCCF /* XMPPSRVResolver.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1FD1AA2077F0034FCCF /* XMPPSRVResolver.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4F18D2691AA2077F0034FCCF /* XMPPStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D1FF1AA2077F0034FCCF /* XMPPStream.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4F18D26A1AA2077F0034FCCF /* XMPPTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D2011AA2077F0034FCCF /* XMPPTime.m */; };
-		4F18D26B1AA2077F0034FCCF /* XMPPTransports.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D2031AA2077F0034FCCF /* XMPPTransports.m */; };
-		4F18D26C1AA2077F0034FCCF /* XMPPUserCoreDataStorageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D2061AA2077F0034FCCF /* XMPPUserCoreDataStorageObject.m */; };
-		4F18D26D1AA2077F0034FCCF /* XMPPUserMemoryStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D2081AA2077F0034FCCF /* XMPPUserMemoryStorage.m */; };
-		4F18D26E1AA2077F0034FCCF /* XMPPvCard.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D2091AA2077F0034FCCF /* XMPPvCard.xcdatamodel */; };
-		4F18D26F1AA2077F0034FCCF /* XMPPvCardAvatarCoreDataStorageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D20B1AA2077F0034FCCF /* XMPPvCardAvatarCoreDataStorageObject.m */; };
+		4F18D26B1AA2077F0034FCCF /* XMPPTransports.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D2031AA2077F0034FCCF /* XMPPTransports.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4F18D26C1AA2077F0034FCCF /* XMPPUserCoreDataStorageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D2061AA2077F0034FCCF /* XMPPUserCoreDataStorageObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4F18D26D1AA2077F0034FCCF /* XMPPUserMemoryStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D2081AA2077F0034FCCF /* XMPPUserMemoryStorage.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4F18D26E1AA2077F0034FCCF /* XMPPvCard.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D2091AA2077F0034FCCF /* XMPPvCard.xcdatamodel */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4F18D26F1AA2077F0034FCCF /* XMPPvCardAvatarCoreDataStorageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D20B1AA2077F0034FCCF /* XMPPvCardAvatarCoreDataStorageObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4F18D2701AA2077F0034FCCF /* XMPPvCardAvatarModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D20D1AA2077F0034FCCF /* XMPPvCardAvatarModule.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		4F18D2711AA2077F0034FCCF /* XMPPvCardCoreDataStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D20F1AA2077F0034FCCF /* XMPPvCardCoreDataStorage.m */; };
-		4F18D2721AA2077F0034FCCF /* XMPPvCardCoreDataStorageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D2111AA2077F0034FCCF /* XMPPvCardCoreDataStorageObject.m */; };
+		4F18D2711AA2077F0034FCCF /* XMPPvCardCoreDataStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D20F1AA2077F0034FCCF /* XMPPvCardCoreDataStorage.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4F18D2721AA2077F0034FCCF /* XMPPvCardCoreDataStorageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D2111AA2077F0034FCCF /* XMPPvCardCoreDataStorageObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4F18D2731AA2077F0034FCCF /* XMPPvCardTemp.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D2131AA2077F0034FCCF /* XMPPvCardTemp.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4F18D2741AA2077F0034FCCF /* XMPPvCardTempAdr.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D2151AA2077F0034FCCF /* XMPPvCardTempAdr.m */; };
-		4F18D2751AA2077F0034FCCF /* XMPPvCardTempAdrTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D2171AA2077F0034FCCF /* XMPPvCardTempAdrTypes.m */; };
-		4F18D2761AA2077F0034FCCF /* XMPPvCardTempBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D2191AA2077F0034FCCF /* XMPPvCardTempBase.m */; };
-		4F18D2771AA2077F0034FCCF /* XMPPvCardTempCoreDataStorageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D21B1AA2077F0034FCCF /* XMPPvCardTempCoreDataStorageObject.m */; };
-		4F18D2781AA2077F0034FCCF /* XMPPvCardTempEmail.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D21D1AA2077F0034FCCF /* XMPPvCardTempEmail.m */; };
-		4F18D2791AA2077F0034FCCF /* XMPPvCardTempLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D21F1AA2077F0034FCCF /* XMPPvCardTempLabel.m */; };
+		4F18D2751AA2077F0034FCCF /* XMPPvCardTempAdrTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D2171AA2077F0034FCCF /* XMPPvCardTempAdrTypes.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4F18D2761AA2077F0034FCCF /* XMPPvCardTempBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D2191AA2077F0034FCCF /* XMPPvCardTempBase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4F18D2771AA2077F0034FCCF /* XMPPvCardTempCoreDataStorageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D21B1AA2077F0034FCCF /* XMPPvCardTempCoreDataStorageObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4F18D2781AA2077F0034FCCF /* XMPPvCardTempEmail.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D21D1AA2077F0034FCCF /* XMPPvCardTempEmail.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4F18D2791AA2077F0034FCCF /* XMPPvCardTempLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D21F1AA2077F0034FCCF /* XMPPvCardTempLabel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4F18D27A1AA2077F0034FCCF /* XMPPvCardTempModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D2211AA2077F0034FCCF /* XMPPvCardTempModule.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4F18D27B1AA2077F0034FCCF /* XMPPvCardTempTel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D2231AA2077F0034FCCF /* XMPPvCardTempTel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4F18D27C1AA2077F0034FCCF /* XMPPXFacebookPlatformAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F18D2251AA2077F0034FCCF /* XMPPXFacebookPlatformAuthentication.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -2006,6 +2006,7 @@
 				TargetAttributes = {
 					185977AC1A688A7900C6A3EA = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = YV7A7LY4SX;
 					};
 					185977C81A688A7900C6A3EA = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -2523,6 +2524,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/jiankangyizu.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2537,7 +2539,7 @@
 					"$(PROJECT_DIR)/jiankangyizu/views/commens/XMPPFRAMEWORK",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "45d2cd1d-adea-4253-a80c-288ad69b7c8e";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -2548,6 +2550,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/jiankangyizu.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2562,7 +2565,7 @@
 					"$(PROJECT_DIR)/jiankangyizu/views/commens/XMPPFRAMEWORK",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "45d2cd1d-adea-4253-a80c-288ad69b7c8e";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
