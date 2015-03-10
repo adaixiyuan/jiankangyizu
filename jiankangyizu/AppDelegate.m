@@ -46,7 +46,6 @@
     CommonUser *user= [NSKeyedUnarchiver unarchiveObjectWithData:userData];
     if (user!=nil)
     {
-      
 //        [self connectPushServerWithUserName:user.usern];
         
         UIViewController *firstViewController = [[UserManage alloc] init];
