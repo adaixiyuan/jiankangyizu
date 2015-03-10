@@ -26,13 +26,7 @@
 @synthesize token;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-    //1.确定地址nsurl
-  
-
-    
-    
-    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
+       if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
     {
         [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings
                                                                              settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge)
