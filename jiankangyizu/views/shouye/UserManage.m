@@ -43,8 +43,7 @@
     user = [NSKeyedUnarchiver unarchiveObjectWithData:data];
     self.view.backgroundColor=BACK_COLOR;
     networkFlag = NETON;
-    now=NO;
-    page=0;
+   
     postArray=[[NSMutableArray alloc]initWithCapacity:0];
     FMDatabaseQueue *queue = [[FMDatabaseQueue alloc]initWithPath:[ZUOYLTempHelper getPathForDocuments:@"asiastarbus.db" inDir:@"db"]];
     dao = [[JkUserManageDao alloc]initWithDbqueue:queue];
@@ -65,8 +64,7 @@
     moreButton.frame=CGRectMake(0, 0, 320, 44);
     [footer addSubview:moreButton];
     self.postView.tableFooterView=footer;
-    [postView launchRefreshing];
-}
+   }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -84,7 +82,7 @@
     backLabel.textColor=YINGYONG_COLOR;
     backLabel.textAlignment=NSTextAlignmentLeft;
     backLabel.font=[UIFont boldSystemFontOfSize:23];
-    backLabel.text=@"多多健康.用户管理";
+    backLabel.text=@"多多健康·用户管理";
     UIView *backView1=[[UIView alloc]initWithFrame:CGRectMake(0, 0, 200, 42)];
     backView1.backgroundColor=[UIColor clearColor];
     [backView1 addSubview:backBtn];
@@ -115,11 +113,20 @@
         postView.frame=CGRectMake(0, 0, 320, [[UIScreen mainScreen] bounds].size.height-152);
     }
     [self.navigationController setNavigationBarHidden:NO animated:NO];
+    now=NO;
+    page=0;
+    if([postArray count] > 0)
+    {
+       [postArray removeAllObjects];
+        [postView reloadData];
+    }
+    [postView launchRefreshing];
+
     
 }
 
 -(void)moreData{
-    NSLog(@"moreData");
+    
     if (now==NO) {
         
         [moreButton setTitle:@"" forState:UIControlStateNormal];
@@ -137,7 +144,7 @@
         }
         if ([commonJudgeMent ifConnectNet]){
             page++;
-            NSString *str1 = [NSString stringWithFormat:@"company_id=%d&user_id=%d",self.user.companyId,self.user.identity];
+//            NSString *str1 = [NSString stringWithFormat:@"company_id=%d&user_id=%d",self.user.companyId,self.user.identity];
             NSString  *str =[NSString stringWithFormat:@"company_id=%d&user_id=%d&start_page=%ld&is_page=1&page_size=%d",self.user.companyId,user.identity,(long)page,PAGESIZE];//设置参数
             NSMutableURLRequest *request = [[NSMutableURLRequest alloc]initWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",BASE_URL,GETUSERMANAGELIST_URL]] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:30];
             [request setHTTPMethod:@"POST"];

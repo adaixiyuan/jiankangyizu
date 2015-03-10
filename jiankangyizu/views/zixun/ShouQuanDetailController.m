@@ -59,11 +59,11 @@
     
     backBtn.frame=CGRectMake(0, 0,52, 42);//52, 42
     UILabel *backLabel=[[UILabel alloc]initWithFrame:CGRectMake(52, 0, 300, 42)];
-    UIButton *saveBtn=[UIButton buttonWithType:UIButtonTypeCustom];
-    [saveBtn setTitle:@"保存" forState:UIControlStateNormal];
-    [saveBtn setTitleColor:YINGYONG_COLOR forState:UIControlStateNormal];
-    saveBtn.frame=CGRectMake(0, 0,70.5, 42);//52, 42
-    [saveBtn addTarget:self action:@selector(save) forControlEvents:UIControlEventTouchUpInside];
+//    UIButton *saveBtn=[UIButton buttonWithType:UIButtonTypeCustom];
+//    [saveBtn setTitle:@"保存" forState:UIControlStateNormal];
+//    [saveBtn setTitleColor:YINGYONG_COLOR forState:UIControlStateNormal];
+//    saveBtn.frame=CGRectMake(0, 0,70.5, 42);//52, 42
+//    [saveBtn addTarget:self action:@selector(save) forControlEvents:UIControlEventTouchUpInside];
     
     
     
@@ -78,9 +78,9 @@
     [backView1 addSubview:backLabel];
     
     UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backView1];
-    UIBarButtonItem *saveButtonItem = [[UIBarButtonItem alloc] initWithCustomView:saveBtn];
+//    UIBarButtonItem *saveButtonItem = [[UIBarButtonItem alloc] initWithCustomView:saveBtn];
     self.navigationItem.leftBarButtonItem = backButtonItem;
-    self.navigationItem.rightBarButtonItem = saveButtonItem;
+//    self.navigationItem.rightBarButtonItem = saveButtonItem;
 }
 - (void)addTitle
 {
@@ -270,7 +270,7 @@
                 if ([JsonToModel ifSuccessFromDictionaryData:data])
                 {
                  dispatch_async(dispatch_get_main_queue(), ^{
-                [self.navigationController popViewControllerAnimated:YES];
+//                [self.navigationController popViewControllerAnimated:YES];
                  });
                 }
                 else
@@ -399,6 +399,7 @@
     {
         btn.hidden = YES;
     }
+    [self save];
 }
 
 
@@ -467,7 +468,7 @@
 {
     if([stringFlag isEqual:@"申请中"])
     {
-        [btn setTitle:@"申请" forState:UIControlStateNormal];
+        [btn setTitle:@"同意" forState:UIControlStateNormal];
     }
     else if([stringFlag isEqual:@"已授权"])
     {

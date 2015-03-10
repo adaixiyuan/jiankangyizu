@@ -67,6 +67,8 @@
 
 +(BOOL)isValidateEmail:(NSString *)email;
 
++ (BOOL)isValidatePhone:(NSString *)phone;
+
 +(BOOL)isValidateString:(NSString *)myString;
 
 +(UIColor *) colorWithHexString: (NSString *) stringToConvert;

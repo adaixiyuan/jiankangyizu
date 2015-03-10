@@ -38,7 +38,7 @@
 //    @property(nonatomic,assign)double earMin;//耳温最低
 
     dataArray = [[NSMutableArray alloc] init];
-   
+    dataArray2 = [[NSMutableArray alloc] init];
     switch (Flag) {
         case XUEYAYUJING:
         {
@@ -48,19 +48,20 @@
                 dataArray[i] = [NSString stringWithFormat:@"%d",i+1];
                 
             }
-//      if(user.pcpMax > 0 && user.pcpMin > 0 && user.pdpMax > 0 && user.pdpMin > 0)
-//         {
-//             value1 = [NSString stringWithFormat:@"%d",user.pcpMax];
-//             value2 = [NSString stringWithFormat:@"%d",user.pcpMin];
-//             value3 = [NSString stringWithFormat:@"%d",user.pdpMax];
-//             value4 = [NSString stringWithFormat:@"%d",user.pdpMin];
-//         }
-//      else{
+            dataArray2 = dataArray;
+      if(user.pcpMax > 0 && user.pcpMin > 0 && user.pdpMax > 0 && user.pdpMin > 0)
+         {
+             value1 = [NSString stringWithFormat:@"%d",user.pcpMax];
+             value2 = [NSString stringWithFormat:@"%d",user.pcpMin];
+             value3 = [NSString stringWithFormat:@"%d",user.pdpMax];
+             value4 = [NSString stringWithFormat:@"%d",user.pdpMin];
+         }
+      else{
             value1 = @"139";
             value2 = @"90";
             value3 = @"89";
             value4 = @"60";
-//      }
+      }
             [self initViewByBp];
         }
             break;
@@ -73,19 +74,25 @@
                 dataArray[i] = [NSString stringWithFormat:@"%d",i+1];
                 
             }
-//            if(user.gluMax > 0 && user.gluMin > 0)
-//            {
-//                value1 = [self getIntValue:user.gluMax];
-//                value2 = [self getAfterpointValue:user.gluMax];
-//                value3 = [self getIntValue:user.gluMin];
-//                value4 = [self getAfterpointValue:user.gluMin];
-//            }else
-//            {
+            for(i = 0; i < 10; i++)
+            {
+                dataArray2[i] = [NSString stringWithFormat:@"%d",i+1];
+                
+            }
+
+            if(user.gluMax > 0 && user.gluMin > 0)
+            {
+                value1 = [self getIntValue:user.gluMax];
+                value2 = [self getAfterpointValue:user.gluMax];
+                value3 = [self getIntValue:user.gluMin];
+                value4 = [self getAfterpointValue:user.gluMin];
+            }else
+            {
             value1 = @"6";
             value2 = @"1";
             value3 = @"3";
             value4 = @"9";
-//            }
+            }
             [self initViewByEarAndGlu];
             
         }
@@ -95,23 +102,28 @@
             int i;
             for(i = 0; i < 101; i++)
             {
-                dataArray[i] = [NSString stringWithFormat:@"%d",i+1];
+                dataArray[i] = [NSString stringWithFormat:@"%d",i];
                 
             }
-//            if(user.earMax > 0 && user.earMin > 0)
-//            {
-//                value1 = [self getIntValue:user.earMax];
-//                value2 = [self getAfterpointValue:user.earMax];
-//                value3 = [self getIntValue:user.earMin];
-//                value4 = [self getAfterpointValue:user.earMin];
-//            }
-//            else
-//            {
+            for(i = 0; i < 10; i++)
+            {
+                dataArray2[i] = [NSString stringWithFormat:@"%d",i];
+                
+            }
+            if(user.earMax > 0 && user.earMin > 0)
+            {
+                value1 = [self getIntValue:user.earMax];
+                value2 = [self getAfterpointValue:user.earMax];
+                value3 = [self getIntValue:user.earMin];
+                value4 = [self getAfterpointValue:user.earMin];
+            }
+            else
+            {
             value1 = @"37";
             value2 = @"6";
             value3 = @"35";
             value4 = @"8";
-//            }
+            }
            [self initViewByEarAndGlu];
         }
             break;
@@ -129,7 +141,7 @@
 {
     double a = intValue;
     int b = (int)a;
-    a = (a-b)*100;
+    a = (a-b)*10;
     
     
     return [NSString stringWithFormat:@"%f",a];
@@ -419,7 +431,7 @@
     }
     else
     {
-     return [dataArray count];
+     return [dataArray2 count];
     }
    
 }
@@ -431,7 +443,7 @@
     }
 else
     {
-     return [dataArray objectAtIndex:row];
+     return [dataArray2 objectAtIndex:row];
     }
  
 }
@@ -449,16 +461,19 @@ else
     lbl.textAlignment = NSTextAlignmentCenter;
 //    [lbl setBackgroundColor:[UIColor whiteColor]];
     UILabel *pointlable = [[UILabel alloc] initWithFrame:CGRectMake(74, 0, 10, 30)];
-    pointlable.textAlignment = NSTextAlignmentCenter;
-    pointlable.text = @".";
-    pointlable.font = [UIFont boldSystemFontOfSize:18];
-    pointlable.backgroundColor = [UIColor whiteColor];
-   
-    [lbl setText:[NSString stringWithFormat:@"%d",row]];
+    if(Flag != XUEYAYUJING)
+    {
+      pointlable.textAlignment = NSTextAlignmentCenter;
+      pointlable.text = @".";
+      pointlable.font = [UIFont boldSystemFontOfSize:18];
+      pointlable.backgroundColor = [UIColor whiteColor];
+      [myPickView addSubview:pointlable];
+    }
+    [lbl setText:[NSString stringWithFormat:@"%ld",row]];
     [lbl setTextColor:YINGYONG_COLOR];
     [lbl setFont:[UIFont boldSystemFontOfSize:18]];
     [myPickView addSubview:lbl];
-    [myPickView addSubview:pointlable];
+   
     return myPickView;
 
 }
@@ -486,7 +501,7 @@ else
                     NSInteger selectedProvinceIndex = [pickerView selectedRowInComponent:1];
                     if(selectedProvinceIndex-1 >= 0)
                     {
-                      NSString *selectcityArray = [dataArray objectAtIndex:selectedProvinceIndex-1];
+                      NSString *selectcityArray = [dataArray2 objectAtIndex:selectedProvinceIndex-1];
                       value2 = selectcityArray;
                     }
                 }
@@ -509,7 +524,7 @@ else
                     NSInteger selectedProvinceIndex = [pickerView selectedRowInComponent:1];
                     if(selectedProvinceIndex -1>= 0)
                     {
-                     NSString *selectcityArray = [dataArray objectAtIndex:selectedProvinceIndex-1];
+                     NSString *selectcityArray = [dataArray2 objectAtIndex:selectedProvinceIndex-1];
                      value4 = selectcityArray;
                     }
                 }

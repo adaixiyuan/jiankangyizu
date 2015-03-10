@@ -16,6 +16,7 @@
 #import "ziXunView.h"
 #import "mySelfView.h"
 #import "JkDepartment.h"
+#import "CommonStr.h"
 @interface RegisterViewController ()
 
 @end
@@ -284,12 +285,20 @@
 -(void)denglu{
     if ([name isEqualToString:@""]) {
        
-        [commonAction showToast:@"请填写手机号" WhithNavigationController:self.navigationController];
+        [commonAction showToast:@"请填写手机号" WhithNavigationController:self];
     }else if ([password isEqualToString:@""]){
-        [commonAction showToast:@"请填写密码" WhithNavigationController:self.navigationController];
-    }else if ([email isEqualToString:@""]){
-       [commonAction showToast:@"请填写邮箱" WhithNavigationController:self.navigationController];
-    }else{
+        [commonAction showToast:@"请填写密码" WhithNavigationController:self];
+    }
+//    else if ([comm])
+    else if([password length] <6 || [password length]>16)
+    {
+        [commonAction showToast:@"密码范围在6-16位之间" WhithNavigationController:self];
+    }
+    else if ([email isEqualToString:@""]){
+       [commonAction showToast:@"请填写邮箱" WhithNavigationController:self];
+    }
+   
+    else{
         if ([commonJudgeMent ifConnectNet]){
             NSMutableURLRequest *request = [[NSMutableURLRequest alloc]initWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",BASE_URL,REGISTER_URL]] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:30];
             [request setHTTPMethod:@"POST"];

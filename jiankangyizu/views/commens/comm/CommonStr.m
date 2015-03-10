@@ -329,6 +329,12 @@
     return [emailTest evaluateWithObject:email];
 }
 
++ (BOOL)isValidatePhone:(NSString *)phone
+{
+   NSString *phoneRegex = @"^1\d{10}$|^(0\d{2,3}-?|\(0\d{2,3}\))?[1-9]\d{4,7}(-\d{1,8})?$";
+    NSPredicate *phoneTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",phoneRegex];
+    return [phoneTest evaluateWithObject:phone];
+}
 //验证是否包含特殊字符(除：_abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 以外的字符)
 +(BOOL)isValidateString:(NSString *)myString
 {

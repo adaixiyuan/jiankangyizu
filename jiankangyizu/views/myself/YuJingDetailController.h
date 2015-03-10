@@ -11,6 +11,7 @@
 @interface YuJingDetailController : UIViewController <UIPickerViewDataSource,UIPickerViewDelegate>
 {
     NSMutableArray *dataArray;
+    NSMutableArray *dataArray2;
     UIPickerView *zuigaoPickView;
     UIPickerView *zuidiPickView;
     CommonUser *user;

@@ -21,6 +21,7 @@
 //注册
 #define REGISTER_URL @"/webadmin/action.jsp"
 
+//获取预警数量
 #define GETWARNNUMBER_URL @"/appbackend/warning/warning_info.jsp"
 
 //获取预警详情
@@ -38,7 +39,7 @@
 //通用数据提交
 #define SUBMIT_URL @"/appbackend/submit/insert.jsp"
 
-
+//提交更新
 #define SETTINGUPDATE_URL @"/appbackend/setting/update.jsp"
 
 //健康授权

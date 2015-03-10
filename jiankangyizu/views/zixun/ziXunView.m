@@ -372,7 +372,7 @@
                 }
             }
             
-            str =[NSString stringWithFormat:@"user_id=%d&start_page=%d&is_page=1&page_size=%d&flag=%@&condition=%@",user.identity,page,PAGESIZE,queryFlag,queryCondition];//设置参数
+            str =[NSString stringWithFormat:@"company_id=%d&start_page=%d&is_page=1&page_size=%d&flag=%@&condition=%@",user.companyId,page,PAGESIZE,queryFlag,queryCondition];//设置参数
             NSLog(@"string url:%@",str);
             NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];
             [request setHTTPBody:data];

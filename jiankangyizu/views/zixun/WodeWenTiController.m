@@ -106,8 +106,8 @@
             //        举例：BASEURL//saleout/saleout_list.jsp?sid=10&longitude=0&latitude=0&distance=26400&page_size=2&start_page=1&is_page=1
             
           
-            NSString *str = [NSString stringWithFormat:@"start_page=%ld&page_size=%d&is_page=1&table_name=jk_consulation&condition= doctor_id=%d",page,PAGESIZE,user.identity];
-            
+            NSString *str = [NSString stringWithFormat:@"start_page=%ld&page_size=%d&is_page=1&table_name=jk_consulation&condition= doctor_id=%d&company_id=%d",page,PAGESIZE,user.identity,user.companyId];
+            NSLog(@"str url:%@",str);
             
             NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];
             [request setHTTPBody:data];
@@ -279,16 +279,15 @@
 //数据传完之后调用此方法
 -(void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
-    NSLog(@"nsData:%@",self.receiveData2);
+   
     if (connection==connection2) {
        
-        @try {
             NSArray *objects=[JsonToModel objectsFromDictionaryData:self.receiveData2 className:@"JkConsultation"];
         @autoreleasepool {
             [dao replaceArrayToDB:objects callback:^(BOOL block){
                 
             }];
-        }
+      
         if ([objects count] == PAGESIZE) {
             [self.postArray addObjectsFromArray:objects];
             [self.postView reloadData];
@@ -302,7 +301,7 @@
             [wait removeFromSuperview];
             [moreButton setTitle:@"加载完毕" forState:UIControlStateNormal];
             [moreButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-                        now=YES;
+             now=YES;
         }
         else
         {
@@ -311,16 +310,8 @@
             [moreButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
             now = NO;
         }
-        }
-        @catch (NSException *exception) {
-            NSLog(@"error:%@",exception);
-        }
-        @finally {
-            [wait removeFromSuperview];
-            [moreButton setTitle:@"加载失败" forState:UIControlStateNormal];
-            [moreButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-        }
-        firstDone = 1;
+    }
+       firstDone = 1;
 //        now=NO;
 //        [postView reloadData];
     }

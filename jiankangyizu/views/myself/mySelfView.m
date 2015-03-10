@@ -91,7 +91,7 @@
     backLabel.textColor=YINGYONG_COLOR;
     backLabel.textAlignment=NSTextAlignmentLeft;
     backLabel.font=[UIFont boldSystemFontOfSize:23];
-    backLabel.text=@"多多健康.我";
+    backLabel.text=@"多多健康·我";
     UIView *backView1=[[UIView alloc]initWithFrame:CGRectMake(0, 0, 330, 42)];
     backView1.backgroundColor=[UIColor clearColor];
     [backView1 addSubview:backBtn];
